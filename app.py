@@ -3,6 +3,12 @@ import os
 from pdf_processor import extract_text_from_pdf
 from text_cleaner import clean_text
 from summarizer import generate_summary, generate_title
+import nltk
+
+# Download required NLTK data at runtime if not present
+nltk.download("punkt")
+nltk.download("stopwords")
+
 
 # ---------------------- PAGE CONFIG ----------------------
 st.set_page_config(
