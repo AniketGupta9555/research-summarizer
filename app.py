@@ -5,9 +5,11 @@ from text_cleaner import clean_text
 from summarizer import generate_summary, generate_title
 import nltk
 
-# Download required NLTK data at runtime if not present
+# Ensure all required NLTK datasets are downloaded
 nltk.download("punkt")
+nltk.download("punkt_tab")  # NEW: Required for NLTK >= 3.9
 nltk.download("stopwords")
+
 
 
 # ---------------------- PAGE CONFIG ----------------------
